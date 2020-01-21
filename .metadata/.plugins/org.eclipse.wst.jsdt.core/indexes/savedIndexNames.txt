@@ -1,6 +1,1 @@
 INDEX VERSION 1.4+C:\Users\ad\Desktop\inwoo2\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-1101331417.index
-339456439.index
-713955924.index
-1130516023.index
-1822320454.index
