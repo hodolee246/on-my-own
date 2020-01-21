@@ -1,0 +1,36 @@
+package member;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Controller
+public class MemberController {
+
+	@Autowired
+	MemberRepository memberRepository;
+	
+	@GetMapping(value = "/test")
+	public ResponseEntity<?> findById() {
+		
+		log.info("findById in");
+		System.out.println("asdasd");
+		
+		Long id = (long) 1;
+		
+		Optional<Member> member = memberRepository.findById(id);
+		
+		if(member.isPresent()) {
+			return ResponseEntity.ok().body(member);			
+		}
+		
+		return null;
+		
+	}
+}

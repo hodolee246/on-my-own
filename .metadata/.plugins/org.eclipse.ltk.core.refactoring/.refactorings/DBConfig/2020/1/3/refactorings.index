@@ -1,0 +1,9 @@
+1579159137047	Rename resource 'application.properties'
+1579169798021	Delete element
+1579169803704	Rename package 'com.example.sample01.controller'
+1579169807500	Delete element
+1579169808706	Delete element
+1579169832426	Move compilation unit
+1579170178594	Rename type 'memberRepository'
+1579170182917	Rename type 'memberDTO'
+1579170184974	Rename compilation unit 'memberController.java'
