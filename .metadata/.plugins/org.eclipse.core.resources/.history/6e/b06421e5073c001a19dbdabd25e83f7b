@@ -1,8 +1,0 @@
-package member;
-
-import org.springframework.data.repository.CrudRepository;
-
-public interface MemberRepository extends CrudRepository<MemberDTO, Long>{
-
-	MemberDTO findById(long id);
-}
