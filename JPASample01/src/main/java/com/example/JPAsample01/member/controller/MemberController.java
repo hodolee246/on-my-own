@@ -11,7 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.example.JPAsample01.member.dto.Member;
+import com.example.JPAsample01.member.entity.Member;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -20,12 +20,12 @@ import lombok.extern.slf4j.Slf4j;
 public class MemberController {
 
 	@Autowired
-	com.example.JPAsample01.member.repo.MemberRepository memberRepository;
+	com.example.JPAsample01.member.repository.MemberRepository memberRepository;
 	
-	@GetMapping(value = "/JPATest")
+	@GetMapping(value = "/findById")
 	public ResponseEntity<?> findById(@RequestParam(name="id", required = false, defaultValue = "1") Long id) {
 		
-		log.info("JPATest in");
+		log.info("FindById in");
 		
 		Map<String, Object> resultMap = new HashMap<>();
 		Optional<Member> member = memberRepository.findById(id);
@@ -38,10 +38,10 @@ public class MemberController {
 		return ResponseEntity.ok().body(resultMap);
 	}
 	
-	@GetMapping(value = "/JPATest2")
+	@GetMapping(value = "/findAll")
 	public ResponseEntity<?> findAll() {
 		
-		log.info("JPATest2 in");
+		log.info("findAll in");
 		
 		Map<String, Object> resultMap = new HashMap<>();
 		List<Member> memList = (List<Member>) memberRepository.findAll();

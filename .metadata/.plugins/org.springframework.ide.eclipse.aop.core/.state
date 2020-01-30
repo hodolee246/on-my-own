@@ -2,5 +2,6 @@
 <aop-reference-model>
 <aop-project name="JPASample01"/>
 <aop-project name="JPASample02"/>
+<aop-project name="JPASample03"/>
 <aop-project name="DBConfig"/>
 </aop-reference-model>
